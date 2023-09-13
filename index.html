@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Nyanp_Cat</title>
   </head>
-  <body style="
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #231F20;
-  ">
-  <canvas id="unity-canvas"
-    style="
-    position: relative;
-    width: 100%;
-    height: 100%;
-  "></canvas></canvas>
-    <script src="Build/frog_jump.loader.js"></script>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=540 height=960 style="width: 540px; height: 960px; background: #231F20"></canvas>
+    <script src="Build/WebGLTest.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -31,9 +18,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/frog_jump.data",
-        frameworkUrl: "Build/frog_jump.framework.js",
-        codeUrl: "Build/frog_jump.wasm",
+        dataUrl: "Build/WebGLTest.data",
+        frameworkUrl: "Build/WebGLTest.framework.js",
+        codeUrl: "Build/WebGLTest.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Nyanp_Cat",
